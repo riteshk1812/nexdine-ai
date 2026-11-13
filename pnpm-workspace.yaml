@@ -1,0 +1,15 @@
+packages:
+  - "apps/*"
+  - "services/*"
+  - "packages/*"
+permissions:
+  '@parcel/watcher':
+    build: false
+  '@prisma/engines':
+    build: true
+  '@reduxjs/toolkit':
+    skills: false
+  esbuild:
+    build: false
+  prisma:
+    build: true

@@ -1,0 +1,38 @@
+
+services:
+  mongodb:
+    image: mongo:8
+    container_name: nexcommerce-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    volumes:
+      - mongodb_data:/data/db
+
+  postgres:
+    image: postgres:17
+    container_name: nexcommerce-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: nexcommerce
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: nexcommerce-rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  mongodb_data:
+  postgres_data:
