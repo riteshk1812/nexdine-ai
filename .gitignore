@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Turbo
+.turbo/
+
+# Testing
+playwright-report/
+test-results/
+
+# React Native / Expo
+.expo/
+
+# Generated Prisma client
+services/order-service/src/generated/
+
+# TypeScript
+*.tsbuildinfo

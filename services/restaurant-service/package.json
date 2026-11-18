@@ -1,0 +1,32 @@
+{
+  "name": "@bihariRasoi/restaurant-service",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.12.1",
+    "winston": "^3.19.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
